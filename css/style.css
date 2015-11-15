@@ -74,6 +74,12 @@ h1.logotype-main {
   }
 }
 
+/* Typsnittet "Järnliv" i navigationen */
+nav a {
+  font-family: "Järnliv";
+  letter-spacing: 2px;
+}
+
 
 /*
  * NAVIGATION
