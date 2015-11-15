@@ -6,6 +6,26 @@ h1 {
   line-height: 3;
 }
 
+/* Dölj ordinarie ram */
+.navbar {
+  border: 0 !important;
+}
+
+/* Ingen marginal på linjen */
+.navbar hr {
+  margin: 0;
+}
+
+/* Dölj "extralinje" ovanför menylänkarna i småskärmsläge */
+#navbar {
+  border-top: 0;
+}
+
+/* Ta bort marginalen på listan. Förskjuter länkarna lite i sida */
+#navbar .nav {
+  margin: 0;
+}
+
 /* Centrera menylänkarna */
 .navbar-nav {
   width: 100%;
