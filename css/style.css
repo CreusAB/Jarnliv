@@ -13,6 +13,18 @@
  * GENERELLT
  */
 
+/* Logotyp i sidhuvudet på undersidorna */
+img.logotype-header {
+  width: 100px;
+  margin: 45px 0 0 20px;
+  float: left;
+}
+
+/* Justera rubriken så att den är centrerad när logotypen visas */
+body.not-main h1 {
+  margin-right: 100px;
+}
+
  /* Tona in innehåll vid första sidladdningen */
  /*body {
    opacity: 0;
