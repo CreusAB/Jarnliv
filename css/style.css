@@ -1,9 +1,49 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300|Open+Sans+Condensed:300);
+@font-face {
+  font-family: "Järnliv Logotype";
+  src: url(../font/JarnlivLogotype.woff);
+}
+@font-face {
+  font-family: "Järnliv";
+  src: url(../font/Jarnliv.woff);
+}
 
+h1, h2, h3 {
+  font-family: "Järnliv";
+  text-transform: uppercase;
+}
 h1 {
+  line-height: 3;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+h1.logotype-main {
+  font-family: "Järnliv Logotype";
   text-transform: uppercase;
   text-align: center;
-  line-height: 3;
+  font-size: 4em;
+  line-height: 1em;
+}
+@media (max-width: 650px) {
+  h1.logotype-main {
+    font-size: 3.5em;
+  }
+}
+@media (max-width: 550px) {
+  h1.logotype-main {
+    font-size: 3em;
+  }
+}
+@media (max-width: 450px) {
+  h1.logotype-main {
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 350px) {
+  h1.logotype-main {
+    font-size: 2em;
+  }
 }
 
 /* Dölj ordinarie ram */
