@@ -96,28 +96,28 @@ h1.logotype-main {
   font-family: "Järnliv Logotype";
   text-transform: uppercase;
   text-align: center;
-  font-size: 4em;
+  font-size: 3.5em;
   line-height: 1em;
 }
 /* Ändra storlek beroende på skärmstorlek för att matcha logotypen */
 @media (max-width: 650px) {
   h1.logotype-main {
-    font-size: 3.5em;
+    font-size: 3em;
   }
 }
 @media (max-width: 550px) {
   h1.logotype-main {
-    font-size: 3em;
+    font-size: 2.5em;
   }
 }
 @media (max-width: 450px) {
   h1.logotype-main {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 }
 @media (max-width: 350px) {
   h1.logotype-main {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
 
