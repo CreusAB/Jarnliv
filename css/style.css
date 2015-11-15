@@ -26,6 +26,17 @@
  @-webkit-keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
  @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
 
+ /* Animerad linje ovanför menyn */
+ body.loaded .navbar hr {
+   -webkit-animation: hr-width 1s;
+   -webkit-animation-delay: 0.7s;
+   -webkit-animation-fill-mode: forwards;
+   animation: hr-width 1s;
+   animation-delay: 0.7s;
+   animation-fill-mode: forwards;
+ }
+ @-webkit-keyframes hr-width { from { width: 0%; } to { width: 100%; } }
+ @keyframes hr-width { from { width: 0%; } to { width: 100%; } }
 
 /*
  * TYPOGRAFI
@@ -90,19 +101,11 @@ nav a {
   border: 0 !important;
 }
 
-/* Animerad linje ovanför menyn */
+/* Linje som animeras in när sidan laddats */
 .navbar hr {
   width: 0%;
   margin: 0 auto;
-  -webkit-animation: hr-width 1s;
-  -webkit-animation-delay: 1s;
-  -webkit-animation-fill-mode: forwards;
-  animation: hr-width 1s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
 }
-@-webkit-keyframes hr-width { from { width: 0%; } to { width: 100%; } }
-@keyframes hr-width { from { width: 0%; } to { width: 100%; } }
 
 /* Dölj "extralinje" ovanför menylänkarna i småskärmsläge */
 #navbar {
