@@ -6,11 +6,6 @@ h1 {
   line-height: 3;
 }
 
-nav {
-  color: inherit;
-  background-color: #0f0f0e;
-}
-
 /* Centrera menylänkarna */
 .navbar-nav {
   width: 100%;
