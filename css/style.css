@@ -21,7 +21,7 @@ img.logotype-header {
 }
 
 /* Justera rubriken så att den är centrerad när logotypen visas */
-body.not-main h1 {
+.not-startpage h1 {
   margin-right: 100px;
 }
 
