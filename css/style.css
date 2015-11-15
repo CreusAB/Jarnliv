@@ -51,10 +51,32 @@ h1.logotype-main {
   border: 0 !important;
 }
 
-/* Ingen marginal på linjen */
-.navbar hr {
-  margin: 0;
+/* Tona in innehåll */
+body {
+  opacity: 0;
 }
+body.loaded {
+  -webkit-animation: fade-in 0.7s;
+  -webkit-animation-fill-mode: forwards;
+  animation: fade-in 0.7s;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+/* Animerad linje ovanför menyn */
+.navbar hr {
+  width: 0%;
+  margin: 0 auto;
+  -webkit-animation: hr-width 1s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation: hr-width 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes hr-width { from { width: 0%; } to { width: 100%; } }
+@keyframes hr-width { from { width: 0%; } to { width: 100%; } }
 
 /* Dölj "extralinje" ovanför menylänkarna i småskärmsläge */
 #navbar {
