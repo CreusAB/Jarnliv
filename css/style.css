@@ -22,7 +22,7 @@ img.logotype-header {
 
 /* Justera rubriken så att den är centrerad när logotypen visas */
 .not-startpage h1 {
-  margin-right: 100px;
+  margin-right: 120px;
 }
 
  /* Tona in innehåll vid första sidladdningen */
