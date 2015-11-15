@@ -8,16 +8,43 @@
   src: url(../font/Jarnliv.woff);
 }
 
+
+/*
+ * GENERELLT
+ */
+
+ /* Tona in innehåll vid första sidladdningen */
+ body {
+   opacity: 0;
+ }
+ body.loaded {
+   -webkit-animation: fade-in 0.7s;
+   -webkit-animation-fill-mode: forwards;
+   animation: fade-in 0.7s;
+   animation-fill-mode: forwards;
+ }
+ @-webkit-keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+ @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+
+/*
+ * TYPOGRAFI
+*/
+
+/* Gemensamma inställningar för rubriker */
 h1, h2, h3 {
   font-family: "Järnliv";
   text-transform: uppercase;
 }
+
+/* Huvudrubrik */
 h1 {
   line-height: 3;
   letter-spacing: 0.2em;
   text-align: center;
 }
 
+/* Huvudrubrik vid logotypen på huvudsidan */
 h1.logotype-main {
   font-family: "Järnliv Logotype";
   text-transform: uppercase;
@@ -25,6 +52,7 @@ h1.logotype-main {
   font-size: 4em;
   line-height: 1em;
 }
+/* Ändra storlek beroende på skärmstorlek för att matcha logotypen */
 @media (max-width: 650px) {
   h1.logotype-main {
     font-size: 3.5em;
@@ -46,23 +74,15 @@ h1.logotype-main {
   }
 }
 
+
+/*
+ * NAVIGATION
+ */
+
 /* Dölj ordinarie ram */
 .navbar {
   border: 0 !important;
 }
-
-/* Tona in innehåll */
-body {
-  opacity: 0;
-}
-body.loaded {
-  -webkit-animation: fade-in 0.7s;
-  -webkit-animation-fill-mode: forwards;
-  animation: fade-in 0.7s;
-  animation-fill-mode: forwards;
-}
-@-webkit-keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
-@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
 
 /* Animerad linje ovanför menyn */
 .navbar hr {
@@ -96,6 +116,7 @@ body.loaded {
 .navbar-nav>li {
     display: block;
 }
+/* Lägg länkarna på en horisontell linje vid storskärmsläge */
 @media (min-width: 768px) {
   .navbar-nav>li {
     display: inline-block;
@@ -103,6 +124,12 @@ body.loaded {
   }
 }
 
+
+/*
+ * HUVUDSIDAN
+ */
+
+ /* Håll logotypen centrerad och i bra storlek */
 #main-logo {
   margin: 5% auto;
   max-width: 80%;
