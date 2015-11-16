@@ -94,13 +94,13 @@ img.logotype-header {
 h1, h2, h3 {
   font-family: "Järnliv";
   text-transform: uppercase;
+  text-align: center;
 }
 
 /* Huvudrubrik */
 h1 {
   line-height: 3;
   letter-spacing: 0.2em;
-  text-align: center;
 }
 
 /* Huvudrubrik vid logotypen på huvudsidan */
