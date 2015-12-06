@@ -17,32 +17,31 @@
   </head>
   <body>
     <div id="main" class="main">
-      <nav class="navbar navbar-default navbar-fixed-bottom">
-        <div class="container">
-          <hr>
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <!--<a class="navbar-brand" href="#">Järnliv</a>-->
-          </div><!-- ./navbar-header -->
-          <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="foreningen.html">FÖRENINGEN</a></li>
-              <li><a href="ensemblen.html">ENSEMBLEN</a></li>
-              <li><a href="vysotsky.html">VYSOTSKYPROJEKTET</a></li>
-              <li><a href="kontakt.html">KONTAKT</a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container -->
-      </nav>
 
       <div id="main-content" class="container startpage main-content transition--fade">
         <img src="img/logotype-main.png" id="main-logo" class="img-responsive">
         <h1 class="logotype-main">J<span class="logo-animated">Ä</span>RNLIV</h1>
+        <script language="JavaScript" type="text/javascript">
+          function rot(t, u, v)
+          {
+            return String.fromCharCode(((t-u+v)%(v*2))+u);
+          }
+          function rot47(text)
+          {
+            var b = [], c, i = text.length,
+            first = '!'.charCodeAt(), last = '~'.charCodeAt();
+            while(i--)
+            {
+              c = text.charCodeAt(i);
+              if (c>=first && c<=last)
+                b[i] = rot(c, first, 47);
+              else
+                b[i] = text.charAt(i);
+            }
+            return b.join('');
+          }
+          document.write('<p id="main-email">' + rot47(':?7@o;2C?=:G]D6') + '</p>');
+        </script>
       </div><!-- /.container -->
     </div><!-- /#content -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

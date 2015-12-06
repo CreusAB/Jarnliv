@@ -110,6 +110,7 @@ h1.logotype-main {
   text-align: center;
   font-size: 3.5em;
   line-height: 1em;
+  margin-top: 0.25em;
 }
 /* Ändra storlek beroende på skärmstorlek för att matcha logotypen */
 @media (max-width: 650px) {
@@ -187,7 +188,11 @@ nav a {
 
  /* Håll logotypen centrerad och i bra storlek */
 #main-logo {
-  margin: 5% auto;
+  margin: 5% auto 0 auto;
   max-width: 80%;
   max-height: 80%;
+}
+
+#main-email {
+  text-align: center;
 }
