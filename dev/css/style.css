@@ -1,0 +1,193 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300|Open+Sans+Condensed:300);
+@font-face {
+  font-family: "Järnliv Logotype";
+  src: url(../font/JarnlivLogotype.woff);
+}
+@font-face {
+  font-family: "Järnliv";
+  src: url(../font/Jarnliv.woff);
+}
+
+
+/*
+ * GENERELLT
+ */
+
+/* Logotyp i sidhuvudet på undersidorna */
+img.logotype-header {
+  width: 100px;
+  margin: 45px 0 0 20px;
+  float: left;
+}
+
+/* Justera rubriken så att den är centrerad när logotypen visas */
+.not-startpage h1 {
+  margin-right: 120px;
+}
+
+ /* Tona in innehåll vid första sidladdningen */
+ /*body {
+   opacity: 0;
+ }
+ body.loaded {
+   -webkit-animation: fade-in 0.7s;
+   -webkit-animation-fill-mode: forwards;
+   animation: fade-in 0.7s;
+   animation-fill-mode: forwards;
+ }
+ @-webkit-keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+ @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+ /* Animerad linje ovanför menyn */
+ body#start .navbar hr {
+   -webkit-animation: hr-width 1s;
+   -webkit-animation-delay: 0.7s;
+   -webkit-animation-fill-mode: forwards;
+   animation: hr-width 1s;
+   animation-delay: 0.5s;
+   animation-fill-mode: forwards;
+   width: 0%;
+ }
+ @-webkit-keyframes hr-width { from { width: 0%; } to { width: 100%; } }
+ @keyframes hr-width { from { width: 0%; } to { width: 100%; } }
+
+
+/*
+ * ANIMATIONER
+ */
+
+ #main .main-content.transition--fade {
+   -webkit-animation-duration: 1s;
+   -webkit-transition-timing-function: ease-in-out;
+   -webkit-animation-fill-mode: both;
+   -webkit-animation-name: fadeIn;
+   animation-duration: 1s;
+   transition-timing-function: ease-in-out;
+   animation-fill-mode: both;
+   animation-name: fadeIn;
+ }
+
+@-webkit-keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+#main.is-exiting .main-content {
+  -webkit-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse;
+}
+
+/* Vänd Ä-et i JÄRNLIV */
+.logo-animated {
+  display: inline-block;
+  transform: rotateX(180deg);
+  animation: rotate-letter 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes rotate-letter { 0% { transform: rotateX(180deg)} 100% { transform: rotateX(0deg)} }
+
+
+/*
+ * TYPOGRAFI
+*/
+
+/* Gemensamma inställningar för rubriker */
+h1, h2, h3 {
+  font-family: "Järnliv";
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Huvudrubrik */
+h1 {
+  line-height: 3;
+  letter-spacing: 0.2em;
+}
+
+/* Huvudrubrik vid logotypen på huvudsidan */
+h1.logotype-main {
+  font-family: "Järnliv Logotype";
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3.5em;
+  line-height: 1em;
+}
+/* Ändra storlek beroende på skärmstorlek för att matcha logotypen */
+@media (max-width: 650px) {
+  h1.logotype-main {
+    font-size: 3em;
+  }
+}
+@media (max-width: 550px) {
+  h1.logotype-main {
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 450px) {
+  h1.logotype-main {
+    font-size: 2em;
+  }
+}
+@media (max-width: 350px) {
+  h1.logotype-main {
+    font-size: 1.5em;
+  }
+}
+
+/* Typsnittet "Järnliv" i navigationen */
+nav a {
+  font-family: "Järnliv";
+  letter-spacing: 2px;
+}
+
+
+/*
+ * NAVIGATION
+ */
+
+/* Dölj ordinarie ram */
+.navbar {
+  border: 0 !important;
+}
+
+/* Linje som animeras in när sidan laddats */
+.navbar hr {
+  margin: 0 auto;
+}
+
+/* Dölj "extralinje" ovanför menylänkarna i småskärmsläge */
+#navbar {
+  border-top: 0;
+}
+
+/* Ta bort marginalen på listan. Förskjuter länkarna lite i sida */
+#navbar .nav {
+  margin: 0;
+}
+
+/* Centrera menylänkarna */
+.navbar-nav {
+  width: 100%;
+  text-align: center;
+}
+.navbar-nav>li {
+    display: block;
+}
+/* Lägg länkarna på en horisontell linje vid storskärmsläge */
+@media (min-width: 768px) {
+  .navbar-nav>li {
+    display: inline-block;
+    float: none;
+  }
+}
+
+
+/*
+ * HUVUDSIDAN
+ */
+
+ /* Håll logotypen centrerad och i bra storlek */
+#main-logo {
+  margin: 5% auto;
+  max-width: 80%;
+  max-height: 80%;
+}
