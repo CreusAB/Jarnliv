@@ -138,10 +138,22 @@ h1, h2, h3 {
   text-align: center;
 }
 
-/* Huvudrubrik */
+/* Rubriker */
 h1 {
   line-height: 3;
   letter-spacing: 0.2em;
+  font-size: 3em;
+}
+@media (max-width: 479px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  h3 {
+    font-size: 1em;
+  }
 }
 
 /* Typsnittet "Järnliv" i navigationen */
