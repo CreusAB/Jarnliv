@@ -151,6 +151,7 @@ h1.logotype-main {
   text-align: center;
   font-size: 3.5em;
   line-height: 1em;
+  margin-top: 10px;
 }
 /* Ändra storlek beroende på skärmstorlek för att matcha logotypen */
 @media (max-width: 650px) {
@@ -233,8 +234,12 @@ body {
 
  /* Håll logotypen centrerad och i bra storlek */
 
+.startpage-placeholder {
+  margin-top: 3%;
+}
+
 #main-logo {
-  margin: 5% auto;
+  margin: 0 auto;
   max-width: 70%;
   max-height: 70%;
 }
