@@ -13,7 +13,7 @@ $(function(){
     prefetchOn: 'mouseover touchstart',
     cacheLength: 4,
     onStart: {
-      duration: 1000, // Duration of our animation
+      duration: 0, // Duration of our animation
       render: function ($container) {
         // Add your CSS animation reversing class
         $container.addClass( 'is-exiting' );
