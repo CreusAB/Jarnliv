@@ -14,7 +14,7 @@
  */
 
 /* Header */
-.not-startpage header {
+header.logotype-header {
   text-align: center;
 }
 
@@ -27,6 +27,33 @@ img.logotype-header {
 /* Justera rubriken så att den är centrerad när logotypen visas */
 .not-startpage h1 {
   margin-top: 0;
+}
+
+
+/* Förhindra för långa textrader */
+@media (min-width: 992px) {
+  .extra-padding {
+    padding-left: 23%;
+    padding-right: 23%;
+  }
+}
+@media (min-width: 768px) {
+  .extra-padding {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+@media (min-width: 480px) {
+  .extra-padding {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+@media (max-width: 479px) {
+  .extra-padding {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
 }
 
  /* Tona in innehåll vid första sidladdningen */
@@ -147,6 +174,11 @@ nav a {
 /*
  * NAVIGATION
  */
+
+/* Låt inte navbaren dölja text längst ner på sidan */
+body {
+  margin-bottom: 70px;
+}
 
 /* Dölj ordinarie ram */
 .navbar {
