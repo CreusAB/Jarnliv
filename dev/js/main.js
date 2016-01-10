@@ -2,7 +2,7 @@ $( document ).ready(function() {
   'use strict';
 
   /* Ange att innehållet har laddats */
-  $( "body" ).addClass( "loaded" );
+  //$( "body" ).addClass( "loaded" );
 });
 
 $(function(){
@@ -12,8 +12,11 @@ $(function(){
     prefetch: true,
     prefetchOn: 'mouseover touchstart',
     cacheLength: 4,
+    onBefore: function($container, $newContent) {
+      $( "body" ).addClass( "loaded" );
+    },
     onStart: {
-      duration: 1000, // Duration of our animation
+      duration: 0, // Duration of our animation
       render: function ($container) {
         // Add your CSS animation reversing class
         $container.addClass( 'is-exiting' );

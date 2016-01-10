@@ -13,16 +13,47 @@
  * GENERELLT
  */
 
+/* Header */
+header.logotype-header {
+  text-align: center;
+}
+
 /* Logotyp i sidhuvudet på undersidorna */
 img.logotype-header {
-  width: 100px;
-  margin: 45px 0 0 20px;
-  float: left;
+  /*width: 100px;*/
+  margin-top: 2em;
 }
 
 /* Justera rubriken så att den är centrerad när logotypen visas */
 .not-startpage h1 {
-  margin-right: 120px;
+  margin-top: 0;
+}
+
+
+/* Förhindra för långa textrader */
+@media (min-width: 992px) {
+  .extra-padding {
+    padding-left: 23%;
+    padding-right: 23%;
+  }
+}
+@media (min-width: 768px) {
+  .extra-padding {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+@media (min-width: 480px) {
+  .extra-padding {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+@media (max-width: 479px) {
+  .extra-padding {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
 }
 
  /* Tona in innehåll vid första sidladdningen */
@@ -39,7 +70,7 @@ img.logotype-header {
  @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
 
  /* Animerad linje ovanför menyn */
- body#start .navbar hr {
+ .navbar hr {
    -webkit-animation: hr-width 1s;
    -webkit-animation-delay: 0.7s;
    -webkit-animation-fill-mode: forwards;
@@ -47,6 +78,11 @@ img.logotype-header {
    animation-delay: 0.5s;
    animation-fill-mode: forwards;
    width: 0%;
+ }
+ body.loaded .navbar hr {
+   -webkit-animation: none;
+   animation: none;
+   width: 100%;
  }
  @-webkit-keyframes hr-width { from { width: 0%; } to { width: 100%; } }
  @keyframes hr-width { from { width: 0%; } to { width: 100%; } }
@@ -56,7 +92,7 @@ img.logotype-header {
  * ANIMATIONER
  */
 
- #main .main-content.transition--fade {
+#main .main-content.transition--fade {
    -webkit-animation-duration: 1s;
    -webkit-transition-timing-function: ease-in-out;
    -webkit-animation-fill-mode: both;
@@ -82,6 +118,11 @@ img.logotype-header {
   animation: rotate-letter 1s;
   animation-delay: 1.5s;
   animation-fill-mode: forwards;
+}
+body.loaded .logo-animated {
+  display: inline;
+  transform: rotateX(180deg);
+  animation: none;
 }
 @keyframes rotate-letter { 0% { transform: rotateX(180deg)} 100% { transform: rotateX(0deg)} }
 
@@ -144,6 +185,11 @@ nav a {
  * NAVIGATION
  */
 
+/* Låt inte navbaren dölja text längst ner på sidan */
+body {
+  margin-bottom: 70px;
+}
+
 /* Dölj ordinarie ram */
 .navbar {
   border: 0 !important;
@@ -186,8 +232,9 @@ nav a {
  */
 
  /* Håll logotypen centrerad och i bra storlek */
+
 #main-logo {
   margin: 5% auto;
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 70%;
+  max-height: 70%;
 }
